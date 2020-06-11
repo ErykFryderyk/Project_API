@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBB Quotes Game</title>
+
+    <link href="./img/favicon.png" rel="icon">
+
+    <script src="https://kit.fontawesome.com/643726dbb6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body class="quotes-game">
+    <header class="header">
+        <img class="logo" src="./img/Breaking_Bad_logo.svg.png" alt="">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="nav-menu__item">Characters</a></li>
+                <li><a href="game.html" class="nav-menu__item">Quotes Game</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="game-board">
+                <div class="game-board__inner">
+                    <h1 class="game-board__title">Quotes Game</h1>
+                    <h3 class="game-board__subtitle">Who said that?</h3>
+                    <div class="game-board__quote">
+                        <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+                        <p class="game-txt"><!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quo magni repellat nostrum itaque debitis a. Sequi, commodi reprehenderit explicabo a debitis, praesentium eaque nesciunt quaerat cumque harum, delectus voluptates. --></p>
+                    </div>
+                    <span class="game-board__score">Point: 0</span>
+                    <div class="game-board__answer">
+                        <button class="game-board__button"><!-- Walter White --></button>
+                        <button class="game-board__button"><!-- Jesse Pinkman --></button>
+                        <button class="game-board__button"><!-- Skyler White --></button>
+                        <button class="game-board__button"><!-- Wandy S --></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/game.js"></script>
+</body>
+</html>

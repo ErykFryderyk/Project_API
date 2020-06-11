@@ -1,3 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+//variables
+
+$green: #1F6032;
+$dark-green: #0d3e10;
+$darker-green: #093009;
+$green-primary: #032202;
+$white: rgb(201, 201, 201);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: none;
+}
 body{
-    background-color: black;
+    background-image: url('../img/walterwhite-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: $white;
+    font-family: 'Noto Sans',
+    sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header{
+    width: 100%;
+    padding: 5px 100px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+
+}
+
+.nav-menu{  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__item{
+        color: $green;
+        font-size: 20px;
+        font-family: 'Bitter',
+        serif;
+        padding: 5px 10px;
+        border-radius: 5px ;
+        margin-left: 10px;
+        transition: 
+            background-color .3s ease-in-out, 
+            color .3s ease-in-out;
+
+        &:hover{
+            background-color: $green;
+            color: white;
+        }
+    }
+}
+
+
+.logo{
+    height: 50px;
+}
+
+.characters-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.main-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    &--grid-style{
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        .character-box{
+            width: 550px;
+            display: flex;
+        }
+    }
+}
+
+
+
+
+
+.character-search{
+    width: 800px;
+    height: 70px;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__input{
+        height: 40px;
+        border: none;
+        background-color: rgba($color: #FFF, $alpha: .03);
+        color: white;
+        border: 2px solid $green;
+        border-right: none;
+        margin-left: 80px;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 20px;
+        border-radius: 10px 0px 0px 10px;
+        letter-spacing: 1px;
+    }
+
+    &__button{
+        height: 40px;
+        width: 100px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: white;
+        background-color: $green;
+        border: none;
+        border-radius: 0px 10px 10px 0px;
+        cursor: pointer;
+        outline: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover{
+            color: $green-primary;
+        }
+    }
+}
+
+.character-box{
+    // width: 700px;
+    // min-height: 100px;
+    display: flex;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    margin-bottom: 15px;
+    
+    &__inner{
+        max-width: 70%;
+        padding: 20px 30px;
+    }
+
+    &__name {
+        font-size: 26px;
+        color: $green;
+        font-weight: normal;
+        font-family: 'Bitter',
+        serif;
+    }
+
+    &__nickname{
+        margin-bottom: 30px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: 'Bitter',
+        serif;
+    }
+    
+    &__info{
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 15px;
+        
+    }
+
+    &__label{
+        font-size: 13px;
+    }
+
+
+    &__image{
+        // width: 300px;
+        // min-height: 350px;
+        // border-left: 2px solid $green;
+        // overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img{
+            display: block;
+            width: 220px;
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+}
+.buttons {
+    border: 2px solid $green;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: auto;
+    background-color: rgba($color: #FFF, $alpha: .03);
+
+}
+
+.btn-set-look{
+    height: 40px;
+    width: 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: $green;    
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+    outline: none;
+
+    &:hover{
+        color: white;
+    }
+}
+
+.all-characters-button{
+    height: 30px;
+    font-size: 14px;
+    padding: 0 20px;
+    border-radius: 10px;
+    background-color: rgba($color: #FFFFFF, $alpha: .05);
+    color: white;
+    border: 2px solid $green;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
+    outline: none;
+    margin-left: 10px;
+
+
+    &:hover{
+        background-color: $green;
+        color: $green-primary;
+    }
+}
+
+
+.quotes-game{
+    background-image: url('../img/26-266446_custom-hd-breaking-bad-wallpapers-and-pictures-iphone.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Noto Sans',
+    sans-serif;
+
+}
+
+.game-board{
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__inner{
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        border: 2px solid $green;
+        padding: 20px;
+        max-width: 800px;
+        min-width: 550px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    &__title{
+        color: $green;
+        letter-spacing: 1px;
+        font-family: 'Bitter',
+        serif;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle{
+        text-align: center;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-weight: 300;
+        font-size: 20px;
+        color: white;
+
+    }
+
+    &__quote{
+        padding: 10px 30px;
+        background-color: rgba($color: #000, $alpha: .5);
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    &__score{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: #1F6032;
+
+    }
+
+    &__answer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    &__button{
+        width: 100%;
+        border: 2px solid $green;
+        font-size: 18px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: rgba($color: #000000, $alpha: .3);
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        transition: all .3s ease-in-out;
+        outline: none;
+        
+        &:hover{
+            background-color: $green;
+            color: $green-primary;
+        }
+    }
+    
+    .quote-icon{
+        position: absolute;
+        transform: translate(-20px, -35px);
+        font-size: 40px;
+        color: rgba(155, 155, 155, 0.644);
+    }
+    
+    .game-txt{
+        padding: 10px;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        letter-spacing: .5px;
+    }
+
+    .good-answer{
+        background-color: rgb(10, 116, 24);
+        border: 2px solid #0d3e10;
+        color: white;
+    }
+
+    .wrong-answer{
+        background-color: rgb(116, 10, 10);
+        border: 2px solid #330101;
+    }
+
 }

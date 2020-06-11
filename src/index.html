@@ -3,11 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API</title>
+    <title>Breaking Bad API</title>
+
+    <link href="./img/favicon.png" rel="icon">
+
+    <script src="https://kit.fontawesome.com/643726dbb6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/style.css">
     
 </head>
 <body>
+    <header class="header">
+        <img class="logo" src="./img/Breaking_Bad_logo.svg.png" alt="">
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-menu__list">
+                    <a href="index.html" class="nav-menu__item">Characters</a>
+                </li>
+                <li class="nav-menu__list">
+                    <a href="game.html" class="nav-menu__item">Quotes Game</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="characters-section">
+                    <div class="character-search">
+                        <input class="character-search__input" type="text" placeholder="e.g. Wendy S.">
+                        <button class="character-search__button">Search</button>
+                        <button class="all-characters-button"> All</button>
+                        <div class="buttons">
+                            <button class="btn-set-look btn-set-look__list" title="List">
+                                <i class="fa fa-th-list"></i>
+                            </button>
+                            <button class="btn-set-look btn-set-look__grid" title="Grid">
+                                <i class="fa fa-th-large"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-box">
+
+                    <div class="character-box">
+                        <div class="character-box__inner">
+                            <h2 class="character-box__name">Walter White</h2>
+                            <p class="character-box__nickname">Heisenberg</p>
+
+                            <p class="character-box__label">Birth date:</p>
+                            <h4 class="character-box__info">09-07-1958</h4>
+
+                            <p class="character-box__label">Profession:</p>
+                            <h4 class="character-box__info">High School Chemistry Teacher, Meth King Pin</h4>
+
+                            <p class="character-box__label">Status:</p>
+                            <h4 class="character-box__info">Presumed dead</h4>
+
+                            <p class="character-box__label">Portrayed:</p>
+                            <h4 class="character-box__actor">Bryan Cranston</h4>
+                        </div>
+                        <div class="character-box__image">
+                            <img class="" src="https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg" alt="Sorry Error">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/main.js"></script>    
